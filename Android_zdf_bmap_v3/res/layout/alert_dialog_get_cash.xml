@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/layoutDialog"
+        android:layout_width="@dimen/width_dialog"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/img_dialog_bg" >
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tvTitle"
+                style="@style/tv_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/btn_height_block"
+                android:layout_alignBottom="@+id/imageView1"
+                android:layout_alignTop="@+id/imageView1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/margin_large"
+                android:layout_marginRight="@dimen/margin_large"
+                android:layout_toRightOf="@+id/imageView1"
+                android:text="提现"
+                android:textColor="@color/gray_zdf_tv_dialog" />
+
+            <include layout="@layout/line_h_gray" />
+
+            <TextView
+                android:id="@+id/tvMsg"
+                style="@style/tv_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/checkBox1"
+                android:layout_alignLeft="@+id/tvTitle"
+                android:layout_alignTop="@+id/checkBox1"
+                android:layout_below="@+id/tvTitle"
+                android:layout_margin="@dimen/margin_medium"
+                android:gravity="center_vertical"
+                android:paddingTop="@dimen/padding_large"
+                android:text="立即拨打4008-521-002，您的提现请求将有有间房客服人工受理。"
+                android:textColor="@color/gray_order_tv" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout1"
+            android:layout_marginTop="@dimen/margin_large" >
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                layout="@layout/line_h_gray_dialog" />
+
+            <Button
+                android:id="@+id/button1"
+                style="@style/btn_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/btn_height_block"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/view1"
+                android:background="@drawable/btn_trans_black_click"
+                android:text="取消"
+                android:textColor="@color/gray_zdf_tv_dialog" />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="@dimen/line_width"
+                android:layout_height="@dimen/line_height_dialog"
+                android:layout_centerInParent="true"
+                android:background="@color/gray_zdf_line_dialog" />
+
+            <Button
+                android:id="@+id/button2"
+                style="@style/btn_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/btn_height_block"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/view1"
+                android:background="@drawable/btn_trans_black_click"
+                android:text="确认"
+                android:textColor="@color/gray_zdf_tv_dialog" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

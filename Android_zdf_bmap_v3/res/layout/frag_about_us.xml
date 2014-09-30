@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg_light" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_about_us_head" />
+
+                <ImageView
+                    android:id="@+id/ivAboutUsLogo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/img_about_us_logo" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_h_gray" />
+
+            <RelativeLayout
+                android:id="@+id/layoutRateUs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_zdf"
+                android:padding="@dimen/padding_large" >
+
+                <TextView
+                    style="@style/tv_medium"
+                    android:layout_centerVertical="true"
+                    android:text="给有间房评分吧" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_arrow_right_hotel" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_h_gray" />
+
+            <RelativeLayout
+                android:id="@+id/layoutFeedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_zdf"
+                android:padding="@dimen/padding_large" >
+
+                <TextView
+                    style="@style/tv_medium"
+                    android:layout_centerVertical="true"
+                    android:text="意见反馈" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_arrow_right_hotel" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_h_gray" />
+
+            <RelativeLayout
+                android:id="@+id/layoutStatement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_zdf"
+                android:padding="@dimen/padding_large" >
+
+                <TextView
+                    style="@style/tv_medium"
+                    android:layout_centerVertical="true"
+                    android:text="免责声明" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_arrow_right_hotel" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_h_gray" />
+
+            <RelativeLayout
+                android:id="@+id/layoutCheckUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_zdf" >
+
+                <TextView
+                    android:id="@+id/tvCheckUpdate"
+                    style="@style/tv_medium"
+                    android:layout_centerVertical="true"
+                    android:paddingBottom="@dimen/padding_large"
+                    android:paddingLeft="@dimen/padding_large"
+                    android:paddingTop="@dimen/padding_large"
+                    android:text="检查更新" />
+
+                <ImageView
+                    android:id="@+id/ivNewVersion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="-4dp"
+                    android:layout_toRightOf="@+id/tvCheckUpdate"
+                    android:paddingBottom="11dp"
+                    android:src="@drawable/ic_new"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_large"
+                    android:src="@drawable/ic_arrow_right_hotel" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_h_gray" />
+
+            <LinearLayout
+                android:id="@+id/layoutHostDebug"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_large"
+                android:background="@color/white_zdf"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:padding="@dimen/padding_large" >
+
+                <TextView
+                    android:id="@+id/tvCurtHost"
+                    style="@style/tv_medium"
+                    android:text="当前主机：" />
+
+                <EditText
+                    android:id="@+id/etTargetHost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:hint="目标主机 (仅输入IP，无需输入端口号)" />
+
+                <Button
+                    android:id="@+id/btnChangeHost"
+                    style="@style/btn_red_long"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:text="更改" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/pb" />
+
+</RelativeLayout>

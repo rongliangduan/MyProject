@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/lv_item_white_trans_click"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/padding_small"
+    android:paddingLeft="@dimen/padding_medium"
+    android:paddingRight="@dimen/padding_medium"
+    android:paddingTop="@dimen/padding_small" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/layoutPrice"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            style="@style/tv_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/padding_small"
+            android:paddingLeft="@dimen/padding_medium"
+            android:paddingRight="@dimen/padding_medium"
+            android:paddingTop="@dimen/padding_small"
+            android:singleLine="true"
+            android:text="酒店名称"
+            android:textColor="#393939" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="@dimen/width_logo_brand"
+                android:layout_height="@dimen/height_logo_brand"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/img_hotel_logo_default" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/imageView1"
+                android:layout_alignTop="@+id/imageView1"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/ic_map_marker_chu"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/layout1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@+id/imageView1"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/layoutDist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingRight="@dimen/padding_medium" >
+
+                    <TextView
+                        style="@style/tv_normal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:text="距离"
+                        android:textColor="#8e8e8e" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:src="@drawable/ic_man_lv" />
+
+                    <TextView
+                        android:id="@+id/tvDist"
+                        style="@style/tv_normal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:text="0.0km"
+                        android:textColor="#8e8e8e" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/padding_medium"
+                    android:paddingTop="@dimen/padding_medium" >
+
+                    <LinearLayout
+                        android:id="@+id/layoutService"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="@dimen/margin_small"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <ImageView
+                                android:id="@+id/ivWifi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_weight="1"
+                                android:src="@drawable/ic_service_wifi_1" />
+
+                            <ImageView
+                                android:id="@+id/ivHours4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/margin_small"
+                                android:layout_toRightOf="@+id/ivWifi"
+                                android:layout_weight="1"
+                                android:src="@drawable/ic_hour_4" />
+
+                            <ImageView
+                                android:id="@+id/ivHours6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/margin_small"
+                                android:layout_toRightOf="@+id/ivHours4"
+                                android:layout_weight="1"
+                                android:src="@drawable/ic_hour_6" />
+
+                            <ImageView
+                                android:id="@+id/ivPark"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/margin_small"
+                                android:layout_toRightOf="@+id/ivHours6"
+                                android:layout_weight="1"
+                                android:src="@drawable/ic_service_park_1" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/textView2"
+                    style="@style/tv_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:gravity="center_vertical"
+                    android:maxLines="2"
+                    android:paddingBottom="@dimen/padding_little"
+                    android:paddingTop="@dimen/padding_little"
+                    android:singleLine="false"
+                    android:text="酒店地址"
+                    android:textColor="#8e8e8e" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivLineV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/margin_little"
+        android:layout_toLeftOf="@+id/layoutPrice"
+        android:src="@drawable/img_line_v_map_vp_item" />
+
+    <LinearLayout
+        android:id="@+id/layoutPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:gravity="right|center_vertical"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/layout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="bottom" >
+
+            <TextView
+                android:id="@+id/textView6"
+                style="@style/tv_medium_red"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView5"
+                android:gravity="center_vertical"
+                android:text="￥" />
+
+            <TextView
+                android:id="@+id/textView5"
+                style="@style/tv_xlarge_red"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/textView6"
+                android:gravity="bottom"
+                android:text="000" />
+
+            <TextView
+                android:id="@+id/textViewStub6"
+                style="@style/tv_medium_red"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textViewStub5"
+                android:gravity="center_vertical"
+                android:text="￥"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/textViewStub5"
+                style="@style/tv_xlarge_red"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/textViewStub6"
+                android:gravity="bottom"
+                android:text="000"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,132 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_large"
+    android:orientation="vertical"
+    android:visibility="visible" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_zdf"
+        android:orientation="vertical" >
+
+        <include layout="@layout/line_h_gray" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/padding_medium"
+            android:paddingLeft="@dimen/padding_large"
+            android:paddingRight="@dimen/padding_large"
+            android:paddingTop="@dimen/padding_medium" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_login_phone" />
+
+            <EditText
+                android:id="@+id/login_et_name"
+                style="@style/et_medium"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_toRightOf="@+id/imageView1"
+                android:hint="请输入手机号码"
+                android:inputType="phone"
+                android:maxLength="11" />
+        </RelativeLayout>
+
+        <include layout="@layout/line_h_gray" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/padding_medium"
+            android:paddingLeft="@dimen/padding_large"
+            android:paddingRight="@dimen/padding_large"
+            android:paddingTop="@dimen/padding_medium" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_login_verifycode" />
+
+            <EditText
+                android:id="@+id/etVerifycode"
+                style="@style/et_medium"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_toRightOf="@+id/imageView1"
+                android:hint="输入4位数验证码"
+                android:inputType="number"
+                android:maxLength="4" >
+            </EditText>
+
+            <Button
+                android:id="@+id/btnGetVerifycode"
+                style="@style/tv_medium_red"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/transparent"
+                android:text="获取验证码"
+                android:textColor="@color/red_text_click" />
+        </RelativeLayout>
+
+        <include layout="@layout/line_h_gray" />
+
+        <LinearLayout
+            android:id="@+id/layoutPsw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/padding_medium"
+                android:paddingLeft="@dimen/padding_large"
+                android:paddingRight="@dimen/padding_large"
+                android:paddingTop="@dimen/padding_medium" >
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_login_psw" />
+
+                <EditText
+                    android:id="@+id/login_et_pwd"
+                    style="@style/et_medium"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_toRightOf="@+id/imageView1"
+                    android:digits="abcdefghijklmnopqrstuvwxyz1234567890"
+                    android:hint="@string/hint_psw"
+                    android:inputType="textVisiblePassword"
+                    android:maxLength="20" />
+            </RelativeLayout>
+
+            <include layout="@layout/line_h_gray" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnRegister"
+        style="@style/btn_red_long"
+        android:layout_marginLeft="@dimen/margin_large"
+        android:layout_marginRight="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_large"
+        android:text="注册" />
+
+</LinearLayout>

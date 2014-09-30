@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="5.4">
+<file name="D:\快盘\AndroidDemo\NineOldAndroids\library\src\com\nineoldandroids\animation\Animator.java">
+</file>
+<file name="D:\快盘\AndroidDemo\NineOldAndroids\library\src\com\nineoldandroids\animation\AnimatorInflater.java">
+</file>
+<file name="D:\快盘\AndroidDemo\NineOldAndroids\library\src\com\nineoldandroids\animation\AnimatorListenerAdapter.java">
+</file>
+<file name="D:\快盘\AndroidDemo\NineOldAndroids\library\src\com\nineoldandroids\animation\AnimatorSet.java">
+</file>
+<file name="D:\快盘\AndroidDemo\NineOldAndroids\library\src\com\nineoldandroids\animation\ArgbEvaluator.java">
+</file>
+<file name="D:\快盘\AndroidDemo\NineOldAndroids\library\src\com\nineoldandroids\animation\FloatEvaluator.java">
+</file>
+<file name="D:\快盘\AndroidDemo\NineOldAndroids\library\src\com\nineoldandroids\animation\FloatKeyframeSet.java">
+</file>
+<file name="D:\快盘\AndroidDemo\NineOldAndroids\library\src\com\nineoldandroids\animation\IntEvaluator.java">
+</file>
+<file name="D:\快盘\AndroidDemo\NineOldAndroids\library\src\com\nineoldandroids\animation\IntKeyframeSet.java">
+</file>
+<file name="D:\快盘\AndroidDemo\NineOldAndroids\library\src\com\nineoldandroids\animation\Keyframe.java">
+</file>
+<file name="D:\快盘\AndroidDemo\NineOldAndroids\library\src\com\nineoldandroids\animation\KeyframeSet.java">
+</file>
+<file name="D:\快盘\AndroidDemo\NineOldAndroids\library\src\com\nineoldandroids\animation\ObjectAnimator.java">
+</file>
+<file name="D:\快盘\AndroidDemo\NineOldAndroids\library\src\com\nineoldandroids\animation\PreHoneycombCompat.java">
+</file>
+<file name="D:\快盘\AndroidDemo\NineOldAndroids\library\src\com\nineoldandroids\animation\PropertyValuesHolder.java">
+</file>
+<file name="D:\快盘\AndroidDemo\NineOldAndroids\library\src\com\nineoldandroids\animation\TimeAnimator.java">
+</file>
+<file name="D:\快盘\AndroidDemo\NineOldAndroids\library\src\com\nineoldandroids\animation\TypeEvaluator.java">
+</file>
+<file name="D:\快盘\AndroidDemo\NineOldAndroids\library\src\com\nineoldandroids\animation\ValueAnimator.java">
+</file>
+<file name="D:\快盘\AndroidDemo\NineOldAndroids\library\src\com\nineoldandroids\util\FloatProperty.java">
+</file>
+<file name="D:\快盘\AndroidDemo\NineOldAndroids\library\src\com\nineoldandroids\util\IntProperty.java">
+</file>
+<file name="D:\快盘\AndroidDemo\NineOldAndroids\library\src\com\nineoldandroids\util\NoSuchPropertyException.java">
+</file>
+<file name="D:\快盘\AndroidDemo\NineOldAndroids\library\src\com\nineoldandroids\util\Property.java">
+</file>
+<file name="D:\快盘\AndroidDemo\NineOldAndroids\library\src\com\nineoldandroids\util\ReflectiveProperty.java">
+</file>
+<file name="D:\快盘\AndroidDemo\NineOldAndroids\library\src\com\nineoldandroids\view\animation\AnimatorProxy.java">
+</file>
+<file name="D:\快盘\AndroidDemo\NineOldAndroids\library\src\com\nineoldandroids\view\ViewHelper.java">
+</file>
+<file name="D:\快盘\AndroidDemo\NineOldAndroids\library\src\com\nineoldandroids\view\ViewPropertyAnimator.java">
+</file>
+<file name="D:\快盘\AndroidDemo\NineOldAndroids\library\src\com\nineoldandroids\view\ViewPropertyAnimatorHC.java">
+</file>
+<file name="D:\快盘\AndroidDemo\NineOldAndroids\library\src\com\nineoldandroids\view\ViewPropertyAnimatorICS.java">
+</file>
+<file name="D:\快盘\AndroidDemo\NineOldAndroids\library\src\com\nineoldandroids\view\ViewPropertyAnimatorPreHC.java">
+</file>
+</checkstyle>

@@ -1,0 +1,161 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutLogin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/layoutTemp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/view_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutTemp"
+        android:layout_marginTop="@dimen/margin_large"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <include layout="@layout/line_h_gray" />
+
+        <RelativeLayout
+            android:id="@+id/layoutUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_zdf"
+            android:paddingBottom="@dimen/padding_medium"
+            android:paddingLeft="@dimen/padding_large"
+            android:paddingRight="@dimen/padding_large"
+            android:paddingTop="@dimen/padding_medium" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_login_phone" />
+
+            <EditText
+                android:id="@+id/login_et_name"
+                style="@style/et_medium"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_toRightOf="@+id/imageView1"
+                android:hint="请输入手机号"
+                android:inputType="phone"
+                android:maxLength="11" />
+        </RelativeLayout>
+
+        <include layout="@layout/line_h_gray" />
+
+        <RelativeLayout
+            android:id="@+id/layoutPsw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_zdf"
+            android:paddingBottom="@dimen/padding_medium"
+            android:paddingLeft="@dimen/padding_large"
+            android:paddingRight="@dimen/padding_large"
+            android:paddingTop="@dimen/padding_medium" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_login_psw" />
+
+            <EditText
+                android:id="@+id/login_et_pwd"
+                style="@style/et_psw"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_toRightOf="@+id/imageView1"
+                android:hint="@string/hint_psw" />
+        </RelativeLayout>
+
+        <include layout="@layout/line_h_gray" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            style="@style/btn_red_long"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_large"
+            android:text="登录" />
+
+        <TextView
+            android:id="@+id/tvShowRegister"
+            style="@style/tv_medium_red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_large"
+            android:text="免费注册" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutOAuthLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <ImageView
+            android:id="@+id/ivLoginOauthHandler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_login_oauth_handler_up" />
+
+        <TextView
+            style="@style/tv_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_zdf"
+            android:gravity="center"
+            android:paddingBottom="@dimen/padding_small"
+            android:paddingTop="@dimen/padding_small"
+            android:text="使用合作网站帐号登录"
+            android:textColor="@color/gray_order_tv" />
+
+        <LinearLayout
+            android:id="@+id/layoutOAuthLoginBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@color/white_zdf"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/padding_medium"
+            android:paddingLeft="@dimen/padding_large"
+            android:paddingRight="@dimen/padding_large"
+            android:paddingTop="@dimen/padding_medium"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/ivLoginQQ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_login_qq_click" />
+
+            <ImageView
+                android:id="@+id/ivLoginSina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_large"
+                android:src="@drawable/ic_login_sina_click" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

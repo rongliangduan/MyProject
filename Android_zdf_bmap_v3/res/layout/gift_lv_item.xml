@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/front"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/btn_trans_black_click"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/padding_small"
+        android:paddingLeft="@dimen/padding_medium"
+        android:paddingRight="@dimen/padding_medium"
+        android:paddingTop="@dimen/padding_small"
+        android:tag="front" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="@dimen/width_logo_brand"
+            android:layout_height="@dimen/height_logo_brand"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/imageView1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView1"
+                style="@style/tv_large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/imageView1"
+                android:layout_toRightOf="@+id/imageView1"
+                android:singleLine="true"
+                android:text="标题"
+                android:textColor="@color/white_zdf"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/tv_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView1"
+                android:layout_below="@+id/textView1"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="西安市友谊西路122号"
+                android:visibility="gone"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/tv_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView2"
+                android:layout_below="@+id/textView2"
+                android:layout_centerHorizontal="true"
+                android:ellipsize="end"
+                android:text="简介"
+                android:textSize="13sp" />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

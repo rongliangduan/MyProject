@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutCall"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/layoutDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/img_dialog_bg" >
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/tvTitle"
+                style="@style/tv_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/padding_medium"
+                android:text="有间房竭诚为您服务"
+                android:textColor="@color/gray_order_tv"
+                android:visibility="visible" />
+
+            <include layout="@layout/line_h_gray" />
+
+            <TextView
+                android:id="@+id/tvMsg"
+                style="@style/tv_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTitle"
+                android:layout_marginLeft="@dimen/margin_large"
+                android:layout_marginRight="@dimen/margin_large"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout1"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/button1"
+                style="@style/btn_red_long"
+                android:layout_width="match_parent"
+                android:background="@null"
+                android:text="客服热线 4008-521-002"
+                android:textColor="@color/red_text_click" />
+
+            <LinearLayout
+                android:id="@+id/layoutBtn2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <include layout="@layout/line_h_gray_dialog" />
+
+                <Button
+                    android:id="@+id/button2"
+                    style="@style/btn_red_long"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/btn_trans_black_click"
+                    android:text="拨至酒店 "
+                    android:textColor="@color/gray_zdf_tv_dialog" />
+            </LinearLayout>
+
+            <include layout="@layout/line_h_gray_dialog" />
+
+            <Button
+                android:id="@+id/button3"
+                style="@style/btn_red_long"
+                android:layout_width="match_parent"
+                android:background="@drawable/btn_trans_black_click"
+                android:text="取消"
+                android:textColor="@color/gray_zdf_tv_dialog" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

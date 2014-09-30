@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_zdf" >
+
+    <include layout="@layout/top_bar_main" />
+
+    <RelativeLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topBarMain" >
+
+        <RelativeLayout
+            android:id="@+id/layoutMap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/layoutBottomPanelMap" >
+
+            <fragment
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                class="cn.op.zdf.ui.BMapFragment" />
+        </RelativeLayout>
+
+        <ImageView
+            style="@style/shadow_above"
+            android:layout_above="@+id/layoutBottomPanelMap" />
+
+        <RelativeLayout
+            android:id="@+id/layoutBottomPanelMap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" >
+
+            <cn.op.common.view.ViewPagerCustomDuration
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_bottom_panel_map" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageView
+        style="@style/shadow_below"
+        android:layout_below="@+id/topBarMain" />
+
+    <RelativeLayout
+        android:id="@+id/layoutDialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/ivMask"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/trans_black_dark"
+            android:visibility="invisible" />
+
+        <include
+            android:id="@+id/dialogExit"
+            layout="@layout/alert_dialog_exit"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/dialogLogout"
+            layout="@layout/alert_dialog_logout"
+            android:visibility="gone" />
+        
+        <include
+            android:id="@+id/dialogGetCash"
+            layout="@layout/alert_dialog_get_cash"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/dialogDeleteUser"
+            layout="@layout/alert_dialog_delete_user"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/dialogClearCache"
+            layout="@layout/alert_dialog_clear_cache"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

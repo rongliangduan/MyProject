@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <cn.op.common.view.HackyViewPager
+        android:id="@+id/viewPager1"
+        android:layout_width="match_parent"
+
+        android:layout_height="@dimen/height_gift_vp" />
+
+    <com.viewpagerindicator.CirclePageIndicator
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/indicator"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/viewPager1"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:padding="3dip"
+        app:fillColor="@color/white"
+        app:pageColor="@color/gray_deep"
+        app:radius="3.5dp"
+        app:strokeColor="@color/white"
+        app:strokeWidth="1.5dp" />
+
+    <ImageView
+        android:id="@+id/ivTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/viewPager1"
+        android:layout_alignTop="@+id/viewPager1"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>

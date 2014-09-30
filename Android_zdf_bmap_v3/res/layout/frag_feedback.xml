@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg_light" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topBar"
+        android:layout_marginTop="@dimen/margin_large"
+        android:orientation="vertical" >
+
+        <include layout="@layout/line_h_gray" />
+
+        <EditText
+            android:id="@+id/editText1"
+            style="@style/tv_medium"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:paddingLeft="@dimen/padding_large"
+            android:paddingRight="@dimen/padding_large"
+            android:paddingTop="@dimen/padding_medium"
+            android:paddingBottom="@dimen/padding_medium"
+            android:background="@color/white_zdf"
+            android:gravity="top"
+            android:hint="说点什么吧，调戏一下我们也成啊…"
+            android:inputType="textMultiLine" >
+        </EditText>
+
+        <include layout="@layout/line_h_gray" />
+
+        <Button
+            android:id="@+id/button1"
+            style="@style/btn_red_long"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_large"
+            android:gravity="center"
+            android:text="确认提交" />
+    </LinearLayout>
+
+    <include layout="@layout/top_bar" />
+
+    <include layout="@layout/pb" />
+
+</RelativeLayout>

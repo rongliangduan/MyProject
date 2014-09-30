@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topBarMain" >
+
+        <RelativeLayout
+            android:id="@+id/layoutKeyword"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_search_view"
+            android:layout_below="@+id/topBarMain"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:background="@drawable/img_keyword_bar_bg"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/padding_medium"
+            android:paddingRight="@dimen/padding_medium"
+            android:visibility="visible" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_keyword_search" />
+
+            <TextView
+                android:id="@+id/tvKeyword"
+                style="@style/tv_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_toLeftOf="@+id/imageView2"
+                android:layout_toRightOf="@+id/imageView1"
+                android:hint="酒店品牌、地址"
+                android:paddingBottom="@dimen/padding_small"
+                android:paddingTop="@dimen/padding_small" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="退出搜索"
+                android:padding="@dimen/padding_medium"
+                android:src="@drawable/ic_keyword_close_s"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <include layout="@layout/layout_no_data" />
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            xmlns:swipe="http://schemas.android.com/apk/res-auto"
+            xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/pull_refresh_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/layoutKeyword"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@color/gray_line"
+            android:dividerHeight="@dimen/line_height_half"
+            android:fadingEdge="vertical"
+            android:fastScrollEnabled="false"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:listSelector="@android:color/transparent"
+            android:smoothScrollbar="true"
+            ptr:ptrMode="pullFromEnd" />
+
+        <include layout="@layout/line_h_gray" />
+    </RelativeLayout>
+
+    <include layout="@layout/pb" />
+
+    <include layout="@layout/top_bar_main" />
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height_half"
+        android:layout_below="@+id/topBarMain"
+        layout="@layout/line_below_topbar" />
+
+</RelativeLayout>

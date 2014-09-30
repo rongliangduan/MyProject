@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/front"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/padding_medium"
+        android:paddingRight="@dimen/padding_medium"
+        android:tag="front" >
+
+        <RelativeLayout
+            android:id="@+id/layoutBottomCoupon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout1"
+            android:layout_marginTop="-12dp"
+            android:background="@drawable/rounded_gray_bg_coupon_item" >
+
+            <TextView
+                android:id="@+id/tvUseState"
+                style="@style/tv_normal"
+                android:paddingBottom="@dimen/padding_small"
+                android:paddingLeft="@dimen/padding_small"
+                android:paddingTop="@dimen/padding_large"
+                android:text="使用状态"
+                android:textColor="@color/gray_order_tv" />
+
+            <TextView
+                android:id="@+id/tvEndDate"
+                style="@style/tv_normal"
+                android:layout_alignParentRight="true"
+                android:paddingBottom="@dimen/padding_small"
+                android:paddingRight="@dimen/padding_small"
+                android:paddingTop="@dimen/padding_large"
+                android:text="有效期至："
+                android:textColor="@color/gray_order_tv" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/ivLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/layout1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/layout1"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_coupon_item_left" />
+
+        <ImageView
+            android:id="@+id/ivRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/layout1"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/layout1"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_coupon_item_right" />
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/ivRight"
+            android:layout_toRightOf="@+id/ivLeft"
+            android:background="@drawable/img_coupon_item_center"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/ivCouponLogo"
+                android:layout_width="@dimen/width_logo_brand"
+                android:layout_height="@dimen/height_logo_brand"
+                android:src="@drawable/img_coupon_logo_default" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_large"
+                android:layout_toRightOf="@+id/ivLogo"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    style="@style/tv_medium"
+                    android:singleLine="true"
+                    android:text="标题" />
+
+                <TextView
+                    android:id="@+id/tvKey"
+                    style="@style/tv_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="@dimen/padding_small"
+                    android:paddingTop="@dimen/padding_small"
+                    android:singleLine="true"
+                    android:text="密码："
+                    android:textColor="@color/black_coupon_tv2" />
+
+                <TextView
+                    android:id="@+id/tvBrief"
+                    style="@style/tv_normal"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="优惠券说明："
+                    android:textColor="@color/gray_coupon_tv" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg_light" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topBar" >
+
+        <Button
+            android:id="@+id/btnShowAddCoupon"
+            style="@style/btn_red_long"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:background="@drawable/btn_orange_stroke_click"
+            android:text="激活优惠券"
+            android:textColor="@color/red_text_in_white_btn_click" />
+
+        <include layout="@layout/layout_no_data" />
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/pull_refresh_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/btnShowAddCoupon"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@color/transparent"
+            android:dividerHeight="@dimen/padding_medium"
+            android:fadingEdge="vertical"
+            android:fastScrollEnabled="false"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:listSelector="@android:color/transparent"
+            android:smoothScrollbar="true"
+            ptr:ptrMode="pullFromEnd" />
+    </RelativeLayout>
+
+    <ImageView
+        style="@style/shadow_below"
+        android:layout_below="@+id/topBar" />
+
+    <include
+        layout="@layout/top_bar"
+        android:visibility="gone" />
+
+    <include layout="@layout/pb" />
+
+</RelativeLayout>

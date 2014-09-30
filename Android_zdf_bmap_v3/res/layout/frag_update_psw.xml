@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg_light" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topBar"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <TextView
+            style="@style/tv_normal_gray"
+            android:paddingBottom="@dimen/padding_medium"
+            android:paddingLeft="@dimen/padding_large"
+            android:paddingRight="@dimen/padding_large"
+            android:paddingTop="@dimen/padding_medium"
+            android:text="密码由 6~20 位字符组成，可由数字、英文字母组成，不能包含符号和空格"
+            android:textColor="@color/gray_order_pay_tv2" />
+
+        <include layout="@layout/line_h_gray" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_zdf"
+            android:paddingBottom="@dimen/padding_large"
+            android:paddingLeft="@dimen/padding_large"
+            android:paddingRight="@dimen/padding_large"
+            android:paddingTop="@dimen/padding_large" >
+
+            <EditText
+                android:id="@+id/etOldPsw"
+                style="@style/et_psw"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:hint="请填写旧密码" />
+        </RelativeLayout>
+
+        <include layout="@layout/line_h_gray" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_zdf"
+            android:paddingBottom="@dimen/padding_large"
+            android:paddingLeft="@dimen/padding_large"
+            android:paddingRight="@dimen/padding_large"
+            android:paddingTop="@dimen/padding_large" >
+
+            <EditText
+                android:id="@+id/etNewPsw"
+                style="@style/et_psw"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:hint="请填写新密码" />
+        </RelativeLayout>
+
+        <include layout="@layout/line_h_gray" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_zdf"
+            android:paddingBottom="@dimen/padding_large"
+            android:paddingLeft="@dimen/padding_large"
+            android:paddingRight="@dimen/padding_large"
+            android:paddingTop="@dimen/padding_large" >
+
+            <EditText
+                android:id="@+id/etNewPswRepeat"
+                style="@style/et_psw"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:hint="请再次填写新密码" />
+        </RelativeLayout>
+
+        <include layout="@layout/line_h_gray" />
+
+        <Button
+            android:id="@+id/btnSure"
+            style="@style/btn_red_long"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_large"
+            android:text="确定" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutBottomSave"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/padding_large"
+        android:paddingRight="@dimen/padding_large" >
+
+        <include layout="@layout/line_h_white" />
+
+        <Button
+            android:id="@+id/updatepwd_btn_sure"
+            style="@style/btn_red_long"
+            android:layout_width="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/btn_trans_black_click"
+            android:gravity="center"
+            android:text="保存修改"
+            android:textColor="@color/white_zdf"
+            android:textSize="@dimen/textSize_1" />
+    </LinearLayout>
+
+    <ImageView
+        style="@style/shadow_below"
+        android:layout_below="@+id/topBar" />
+
+    <include layout="@layout/top_bar" />
+
+    <include layout="@layout/pb" />
+
+</RelativeLayout>

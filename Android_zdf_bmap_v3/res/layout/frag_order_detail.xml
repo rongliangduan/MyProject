@@ -1,0 +1,412 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topBar" >
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/layoutBottomToPay"
+            android:layout_centerHorizontal="true"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/layoutContenOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/layoutOrderState"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black_order"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="@dimen/padding_large" >
+
+                    <ImageView
+                        android:id="@+id/ivOrderState"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/margin_little"
+                        android:src="@drawable/img_booking_canceled"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/tvState"
+                        style="@style/tv_medium_white"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:gravity="center"
+                        android:text="订单状态"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <include layout="@layout/layout_reserve_room" />
+
+                <LinearLayout
+                    android:id="@+id/layoutOrderNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:background="@color/white_zdf"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/padding_medium"
+                        android:paddingLeft="@dimen/padding_large"
+                        android:paddingRight="@dimen/padding_large"
+                        android:paddingTop="@dimen/padding_medium" >
+
+                        <TextView
+                            style="@style/tv_medium"
+                            android:layout_width="wrap_content"
+                            android:text="订单编号" />
+
+                        <TextView
+                            android:id="@+id/tvOrderNum"
+                            style="@style/tv_medium"
+                            android:layout_marginLeft="@dimen/margin_large" />
+                    </LinearLayout>
+
+                    <include layout="@layout/line_h_gray" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/padding_medium"
+                        android:paddingLeft="@dimen/padding_large"
+                        android:paddingRight="@dimen/padding_large"
+                        android:paddingTop="@dimen/padding_medium" >
+
+                        <TextView
+                            style="@style/tv_medium"
+                            android:layout_width="wrap_content"
+                            android:text="订单状态" />
+
+                        <TextView
+                            android:id="@+id/tvOrderState2"
+                            style="@style/tv_medium"
+                            android:layout_marginLeft="@dimen/margin_large" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_height_half"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    layout="@layout/line_h_gray" />
+
+                <include layout="@layout/layout_no_data" />
+
+                <LinearLayout
+                    android:id="@+id/layoutOrderDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white_zdf"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/padding_medium"
+                        android:paddingTop="@dimen/padding_medium" >
+
+                        <RelativeLayout
+                            android:id="@+id/layoutDateArrive"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/padding_large"
+                            android:paddingRight="@dimen/padding_large"
+                            android:paddingStart="@dimen/padding_small"
+                            android:paddingTop="@dimen/padding_small"
+                            android:visibility="visible" >
+
+                            <TextView
+                                android:id="@+id/tvDateArrivePre"
+                                style="@style/tv_medium"
+                                android:layout_centerVertical="true"
+                                android:text="到店时间" />
+
+                            <TextView
+                                android:id="@+id/tvDateArrive"
+                                style="@style/tv_medium"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/margin_large"
+                                android:layout_toRightOf="@+id/tvDateArrivePre"
+                                android:text="" />
+
+                            <ImageView
+                                android:id="@+id/ivReserveInfoArrow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="3dp"
+                                android:src="@drawable/ic_arrow_down" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layoutReserveInfo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/padding_large"
+                            android:paddingRight="@dimen/padding_large"
+                            android:visibility="gone" >
+
+                            <LinearLayout
+                                android:id="@+id/layoutPayWay"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/layoutOrderPrice"
+                                android:layout_marginBottom="@dimen/margin_small"
+                                android:layout_marginTop="@dimen/margin_small" >
+
+                                <TextView
+                                    style="@style/tv_medium"
+                                    android:layout_width="wrap_content"
+                                    android:text="支付方式" />
+
+                                <TextView
+                                    android:id="@+id/tvPayWay"
+                                    style="@style/tv_medium"
+                                    android:layout_marginLeft="@dimen/margin_large"
+                                    android:text="" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/layoutOrderPrice"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/layoutCommitTime"
+                                android:layout_marginBottom="@dimen/margin_small"
+                                android:layout_marginTop="@dimen/margin_small" >
+
+                                <TextView
+                                    style="@style/tv_medium"
+                                    android:layout_width="wrap_content"
+                                    android:text="房间费用" />
+
+                                <TextView
+                                    android:id="@+id/tvPriceOrder"
+                                    style="@style/tv_medium"
+                                    android:layout_marginLeft="@dimen/margin_large" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/layouLiveMan"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/margin_small"
+                                android:layout_marginTop="@dimen/margin_small" >
+
+                                <TextView
+                                    style="@style/tv_medium"
+                                    android:layout_width="wrap_content"
+                                    android:text="入住人　" />
+
+                                <TextView
+                                    android:id="@+id/tvLiveMan"
+                                    style="@style/tv_medium"
+                                    android:layout_width="wrap_content"
+                                    android:layout_marginLeft="@dimen/margin_large"
+                                    android:text="" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/layoutLiveManPhone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/layoutCommitTime"
+                                android:layout_marginBottom="@dimen/margin_small"
+                                android:layout_marginTop="@dimen/margin_small" >
+
+                                <TextView
+                                    style="@style/tv_medium"
+                                    android:layout_width="wrap_content"
+                                    android:text="联系电话" />
+
+                                <TextView
+                                    android:id="@+id/tvLiveManPhone"
+                                    style="@style/tv_medium"
+                                    android:layout_marginLeft="@dimen/margin_large" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <include layout="@layout/line_h_gray" />
+
+                    <RelativeLayout
+                        android:id="@+id/layoutTip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/padding_medium" >
+
+                        <LinearLayout
+                            android:id="@+id/layouHourEndTip"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textView1"
+                            android:background="@color/white_zdf"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/padding_large"
+                            android:paddingRight="@dimen/padding_large" >
+
+                            <TextView
+                                android:id="@+id/tvLiveTip"
+                                style="@style/tv_medium"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_medium"
+                                android:text="入住须知"
+                                android:textColor="@color/gray_light2" />
+
+                            <TextView
+                                android:id="@+id/tvHourEndTip"
+                                style="@style/tv_medium"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_small"
+                                android:text="钟点房最晚退房时间"
+                                android:textColor="@color/gray_light2"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layouHourEndTip"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_bottom_wave_line" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutPayWayContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btnCancelOrder"
+                        style="@style/btn_red_long"
+                        android:layout_marginBottom="@dimen/margin_large"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_marginRight="@dimen/margin_large"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:background="@drawable/btn_orange_stroke_click"
+                        android:text="取消订单"
+                        android:textColor="@color/red_text_in_white_btn_click"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/layoutBottomToPay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white_zdf"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <include layout="@layout/line_h_gray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/padding_medium"
+                android:paddingTop="@dimen/padding_medium" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:gravity="center_vertical" >
+
+                    <TextView
+                        android:id="@+id/tvPayMoneyPre"
+                        style="@style/tv_medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/textView5"
+                        android:paddingTop="5dp"
+                        android:text="支付金额：" />
+                    
+                    <TextView
+                        android:id="@+id/textView6"
+                        style="@style/tv_medium_red"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/textView5"
+                        android:paddingTop="5dp"
+                        android:text="￥" />
+
+                    <TextView
+                        android:id="@+id/tvMoneyPay"
+                        style="@style/tv_xlarge_red"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/textView6"
+                        android:text="000" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnToPay"
+                    style="@style/btn_red"
+                    android:layout_width="133dp"
+                    android:layout_height="39dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:gravity="center"
+                    android:text="立即支付" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        style="@style/shadow_below"
+        android:layout_below="@+id/topBar" />
+
+    <include layout="@layout/top_bar" />
+
+    <RelativeLayout
+        android:id="@+id/layoutDilog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/ivMask"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/trans_black_dark"
+            android:visibility="invisible" />
+
+        <include
+            layout="@layout/alert_dialog_call"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <include layout="@layout/pb" />
+
+</RelativeLayout>

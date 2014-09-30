@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg_light"
+    tools:context="cn.op.zdf.ui.AddCouponActivity" >
+
+    <LinearLayout
+        android:id="@+id/layoutAddCoupon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topBar"
+        android:layout_marginTop="@dimen/margin_large"
+        android:orientation="vertical" >
+
+        <include layout="@layout/line_h_gray" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_zdf"
+            android:paddingBottom="@dimen/padding_large"
+            android:paddingLeft="@dimen/padding_large"
+            android:paddingRight="@dimen/padding_large"
+            android:paddingTop="@dimen/padding_large" >
+
+            <EditText
+                android:id="@+id/etCouponKey"
+                style="@style/et_medium"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:hint="请输入优惠券代码"
+                android:inputType="textEmailAddress"
+                android:maxLength="20" />
+        </RelativeLayout>
+
+        <include layout="@layout/line_h_white" />
+
+        <Button
+            android:id="@+id/btnAddCoupon"
+            style="@style/btn_red_long"
+            android:layout_marginLeft="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_large"
+            android:background="@drawable/btn_gray"
+            android:text="激活优惠券" />
+    </LinearLayout>
+
+    <ImageView
+        style="@style/shadow_below"
+        android:layout_below="@+id/topBar" />
+
+    <include layout="@layout/top_bar" />
+
+    <include layout="@layout/pb" />
+
+</RelativeLayout>

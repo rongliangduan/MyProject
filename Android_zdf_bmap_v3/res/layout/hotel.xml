@@ -1,0 +1,866 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/main_bg_light" >
+
+    <ViewSwitcher
+        android:id="@+id/viewSwitcher1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topBar" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ScrollView
+                android:id="@+id/scrollView1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/layoutBottom"
+                android:layout_centerHorizontal="true"
+                android:fillViewport="true"
+                android:scrollbars="none" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:id="@+id/svHeader1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <cn.op.common.view.GalleryInSv
+                            android:id="@+id/svHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignBottom="@+id/ivStub"
+                            android:layout_alignLeft="@+id/ivStub"
+                            android:layout_alignRight="@+id/ivStub"
+                            android:layout_alignTop="@+id/ivStub"
+                            android:background="@drawable/pic_hotel_img_loading" />
+
+                        <ImageView
+                            android:id="@+id/ivStub"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/pic_hotel_img_loading"
+                            android:visibility="invisible" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/padding_medium"
+                            android:paddingLeft="@dimen/padding_large"
+                            android:paddingRight="@dimen/padding_large"
+                            android:paddingTop="@dimen/padding_medium" >
+
+                            <ImageView
+                                android:id="@+id/ivHotelLogo"
+                                android:layout_width="@dimen/width_logo_brand_s"
+                                android:layout_height="@dimen/height_logo_brand_s"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/img_hotel_logo_default" />
+
+                            <cn.op.common.view.MarqueeText
+                                android:id="@+id/tvHotelName"
+                                style="@style/tv_medium_white"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="3dp"
+                                android:layout_toRightOf="@+id/ivHotelLogo"
+                                android:ellipsize="marquee"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:scrollHorizontally="true"
+                                android:shadowColor="@color/gray_deep"
+                                android:shadowDx="2"
+                                android:shadowDy="2"
+                                android:shadowRadius="2"
+                                android:singleLine="true"
+                                android:text="酒店名称" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/ivStub"
+                            android:background="@color/trans_white_hotel"
+                            android:paddingBottom="@dimen/padding_small"
+                            android:paddingLeft="@dimen/padding_large"
+                            android:paddingRight="@dimen/padding_large"
+                            android:paddingTop="@dimen/padding_small" >
+
+                            <LinearLayout
+                                android:id="@+id/layoutService"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true" >
+
+                                <ImageView
+                                    android:id="@+id/ivWifi"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/ic_service_wifi_1" />
+
+                                <ImageView
+                                    android:id="@+id/ivHours4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/margin_small"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/ic_hour_4" />
+
+                                <ImageView
+                                    android:id="@+id/ivHours6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/margin_small"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/ic_hour_6" />
+
+                                <ImageView
+                                    android:id="@+id/ivPark"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/margin_small"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/ic_service_park_1" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/layoutDist"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/margin_large"
+                                android:layout_toLeftOf="@+id/tvPicCount"
+                                android:layout_toRightOf="@+id/layoutService"
+                                android:gravity="center_vertical" >
+
+                                <TextView
+                                    style="@style/tv_normal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:text="距离"
+                                    android:textColor="#545454" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="5dp"
+                                    android:paddingRight="5dp"
+                                    android:src="@drawable/ic_man_lv" />
+
+                                <TextView
+                                    android:id="@+id/tvDist"
+                                    style="@style/tv_normal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:text="0.0km"
+                                    android:textColor="#545454" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tvPicCount"
+                                style="@style/tv_normal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:ellipsize="end"
+                                android:text="共0张"
+                                android:textColor="#545454" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/svContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/svHeader1"
+                        android:orientation="vertical" >
+
+                        <RelativeLayout
+                            android:id="@+id/layoutAddr"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white_zdf"
+                            android:paddingBottom="@dimen/padding_large"
+                            android:paddingLeft="@dimen/padding_large"
+                            android:paddingRight="@dimen/padding_large"
+                            android:paddingTop="@dimen/padding_large" >
+
+                            <ImageView
+                                android:id="@+id/imageView1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/ic_loc_hotel" />
+
+                            <cn.op.common.view.MarqueeText
+                                android:id="@+id/tvAddr"
+                                style="@style/tv_medium"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/margin_medium"
+                                android:layout_marginRight="@dimen/margin_medium"
+                                android:layout_toLeftOf="@+id/imageView2"
+                                android:layout_toRightOf="@+id/imageView1"
+                                android:ellipsize="marquee"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:scrollHorizontally="true"
+                                android:singleLine="true"
+                                android:text="地址" />
+
+                            <ImageView
+                                android:id="@+id/imageView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/ic_arrow_right_hotel" />
+                        </RelativeLayout>
+
+                        <include layout="@layout/line_h_gray" />
+
+                        <RelativeLayout
+                            android:id="@+id/layoutTel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white_zdf"
+                            android:paddingBottom="@dimen/padding_large"
+                            android:paddingLeft="@dimen/padding_large"
+                            android:paddingRight="@dimen/padding_large"
+                            android:paddingTop="@dimen/padding_large" >
+
+                            <ImageView
+                                android:id="@+id/imageView1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/ic_tel_hotel" />
+
+                            <TextView
+                                android:id="@+id/tvTel"
+                                style="@style/tv_medium"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/margin_medium"
+                                android:layout_marginRight="@dimen/margin_medium"
+                                android:layout_toLeftOf="@+id/imageView2"
+                                android:layout_toRightOf="@+id/imageView1"
+                                android:text="电话" />
+
+                            <ImageView
+                                android:id="@+id/imageView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/ic_arrow_right_hotel" />
+                        </RelativeLayout>
+
+                        <include layout="@layout/line_h_gray" />
+
+                        <cn.op.common.view.MarqueeText
+                            android:id="@+id/tvSaleTimeTip"
+                            style="@style/tv_normal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/main_bg_light"
+                            android:ellipsize="marquee"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:paddingBottom="@dimen/padding_medium"
+                            android:paddingLeft="@dimen/padding_large"
+                            android:paddingRight="@dimen/padding_large"
+                            android:paddingTop="@dimen/padding_medium"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:text="钟点房"
+                            android:textColor="#7d7d7d"
+                            android:visibility="gone" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:id="@+id/layout_content_reserve"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:animateLayoutChanges="true"
+                                android:orientation="vertical" >
+                            </LinearLayout>
+
+                            <include layout="@layout/layout_no_data" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/layoutBottomSubmit"
+                android:fillViewport="true"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/padding_medium" >
+
+                    <include layout="@layout/layout_reserve_room" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_reserve_info1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:background="@color/white_zdf"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/tv_medium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:text="　入住人"
+                                android:visibility="gone" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" >
+
+                                <EditText
+                                    android:id="@+id/tvLiveMan"
+                                    style="@style/et_medium"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="@dimen/margin_large"
+                                    android:layout_toLeftOf="@+id/view1"
+                                    android:hint="请输入入住人姓名" />
+
+                                <View
+                                    android:id="@+id/view1"
+                                    android:layout_width="@dimen/line_width"
+                                    android:layout_height="@dimen/line_height_dialog"
+                                    android:layout_alignBottom="@+id/ivContact"
+                                    android:layout_alignTop="@+id/ivContact"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="@dimen/margin_medium"
+                                    android:layout_toLeftOf="@+id/ivContact"
+                                    android:background="@color/line_white"
+                                    android:visibility="invisible" />
+
+                                <ImageView
+                                    android:id="@+id/ivContact"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:padding="@dimen/padding_medium"
+                                    android:src="@drawable/ic_contact_click" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <include layout="@layout/line_h_gray" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical" >
+
+                            <TextView
+                                style="@style/tv_medium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:text="　手机号"
+                                android:visibility="gone" />
+
+                            <EditText
+                                android:id="@+id/LiveManPhone"
+                                style="@style/et_medium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/margin_large"
+                                android:hint="请输入用于接收手机号"
+                                android:inputType="phone" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:padding="@dimen/padding_medium"
+                                android:src="@drawable/ic_contact_click"
+                                android:visibility="invisible" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <include layout="@layout/line_h_gray" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutPayInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:background="@color/white_zdf"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/margin_medium"
+                            android:layout_marginLeft="@dimen/margin_large"
+                            android:layout_marginRight="@dimen/margin_large"
+                            android:layout_marginTop="@dimen/margin_medium"
+                            android:gravity="center_vertical" >
+
+                            <TextView
+                                style="@style/tv_medium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:text="订单详情"
+                                android:visibility="visible" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/margin_medium"
+                            android:layout_marginLeft="@dimen/margin_large"
+                            android:layout_marginRight="@dimen/margin_large"
+                            android:layout_marginTop="@dimen/margin_medium"
+                            android:gravity="center_vertical" >
+
+                            <TextView
+                                style="@style/tv_medium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:text="订单金额"
+                                android:textColor="@color/gray_light2"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/tvPriceOrder"
+                                style="@style/tv_medium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/margin_large"
+                                android:hint="￥"
+                                android:textColor="@color/gray_light2" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layoutMoneyPayOnline"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/margin_medium"
+                            android:layout_marginLeft="@dimen/margin_large"
+                            android:layout_marginRight="@dimen/margin_large"
+                            android:layout_marginTop="@dimen/margin_medium"
+                            android:gravity="center_vertical" >
+
+                            <TextView
+                                style="@style/tv_medium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:text="预付金额"
+                                android:textColor="@color/gray_light2"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/tvPricePay"
+                                style="@style/tv_medium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/margin_large"
+                                android:hint="￥"
+                                android:textColor="@color/gray_light2" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layoutMoneyDiscount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/margin_medium"
+                            android:layout_marginLeft="@dimen/margin_large"
+                            android:layout_marginRight="@dimen/margin_large"
+                            android:layout_marginTop="@dimen/margin_medium"
+                            android:gravity="center_vertical"
+                            android:visibility="gone" >
+
+                            <TextView
+                                style="@style/tv_medium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:text="预付优惠"
+                                android:textColor="@color/gray_light2"
+                                android:visibility="visible" />
+
+                            <TextView
+                                android:id="@+id/tvMoneyDiscount"
+                                style="@style/tv_medium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/margin_large"
+                                android:hint="￥"
+                                android:textColor="@color/gray_light2" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <include layout="@layout/line_h_white" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutPayWay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:animateLayoutChanges="false"
+                        android:background="@color/white_zdf"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/padding_medium"
+                        android:paddingLeft="@dimen/padding_large"
+                        android:paddingRight="@dimen/padding_medium"
+                        android:paddingTop="@dimen/padding_medium"
+                        android:visibility="visible" >
+
+                        <RelativeLayout
+                            android:id="@+id/layoutPayWayName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/padding_medium"
+                            android:paddingTop="@dimen/padding_medium" >
+
+                            <TextView
+                                android:id="@+id/tvPayWay"
+                                style="@style/tv_medium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:text="支付方式" />
+
+                            <ImageView
+                                android:id="@+id/ivPayWayArrow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="3dp"
+                                android:src="@drawable/ic_arrow_down" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layoutPayWayAnim"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone" >
+
+                            <RelativeLayout
+                                android:id="@+id/layoutPayWayArrive"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="@dimen/padding_medium"
+                                android:paddingTop="@dimen/padding_medium" >
+
+                                <ImageView
+                                    android:id="@+id/imageView1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/ic_payway_arrive" />
+
+                                <TextView
+                                    android:id="@+id/tvPayWay"
+                                    style="@style/tv_medium"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="@dimen/margin_medium"
+                                    android:layout_toRightOf="@+id/imageView1"
+                                    android:text="到店付" />
+
+                                <RadioButton
+                                    android:id="@+id/rbtnPayWayArrive"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:button="@drawable/ic_cb_green_click"
+                                    android:checked="false" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/layoutPayWayOnline"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="@dimen/padding_medium"
+                                android:paddingTop="@dimen/padding_medium" >
+
+                                <ImageView
+                                    android:id="@+id/imageView1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/ic_payway_online" />
+
+                                <TextView
+                                    android:id="@+id/tvPayWay"
+                                    style="@style/tv_medium"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="@dimen/margin_medium"
+                                    android:layout_toRightOf="@+id/imageView1"
+                                    android:text="预付" />
+
+                                <RadioButton
+                                    android:id="@+id/rbtnPayWayOnline"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:button="@drawable/ic_cb_green_click"
+                                    android:checked="false" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <include layout="@layout/line_h_white" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutTip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:background="@color/white_zdf"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/padding_large"
+                        android:paddingRight="@dimen/padding_large"
+                        android:paddingTop="@dimen/padding_medium" >
+
+                        <TextView
+                            android:id="@+id/tvLiveTip"
+                            style="@style/tv_medium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_medium"
+                            android:text="入住须知"
+                            android:textColor="@color/gray_light2" />
+
+                        <TextView
+                            android:id="@+id/tvHourEndTip"
+                            style="@style/tv_medium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:text="钟点房最晚退房时间"
+                            android:textColor="@color/gray_light2"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_bottom_wave_line" />
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/layoutBottomSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white_zdf"
+                android:orientation="vertical" >
+
+                <include layout="@layout/line_h_gray" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/padding_medium"
+                    android:paddingTop="@dimen/padding_medium" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:id="@+id/tvPayMoneyPre"
+                            style="@style/tv_medium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/textView5"
+                            android:paddingTop="5dp"
+                            android:text="支付：" />
+                        
+                        <TextView
+                            android:id="@+id/textView6"
+                            style="@style/tv_medium_red"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/textView5"
+                            android:paddingTop="5dp"
+                            android:text="￥" />
+
+                        <TextView
+                            android:id="@+id/tvPriceSubmit"
+                            style="@style/tv_xlarge_red"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/textView6"
+                            android:text="000" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btnSubmit"
+                        style="@style/btn_red"
+                        android:layout_width="133dp"
+                        android:layout_height="39dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/margin_medium"
+                        android:gravity="center"
+                        android:text="提交订单" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ViewSwitcher>
+
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_topBar"
+        android:layout_gravity="center"
+        android:background="@color/white_zdf"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/ivTopBarBg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/top_bar_bg"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/btnLeft"
+            android:layout_width="@dimen/height_topBar"
+            android:layout_height="@dimen/height_topBar"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_back_click"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/btnRight"
+            android:layout_width="70dp"
+            android:layout_height="@dimen/height_topBar"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/tv_large_red"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/btnRight"
+            android:layout_toRightOf="@+id/btnLeft"
+            android:gravity="center"
+            android:text="酒店信息" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height_half"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray_line" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvTip"
+        style="@style/tv_normal_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topBar"
+        android:background="@color/red_zdf"
+        android:gravity="center"
+        android:padding="@dimen/padding_small"
+        android:text="温馨提示：钟点房默认保留半小时"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/layoutDilog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/ivMask"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/trans_black_dark"
+            android:visibility="invisible" />
+
+        <include
+            android:id="@+id/dialogCancel"
+            layout="@layout/alert_dialog_cancel"
+            android:visibility="invisible" />
+
+        <include
+            layout="@layout/alert_dialog_call"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <include layout="@layout/pb" />
+
+</RelativeLayout>

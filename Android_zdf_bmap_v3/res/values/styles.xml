@@ -1,0 +1,331 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.    -->
+
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="Theme.Sherlock.Light">
+
+        <!-- window transparent -->
+        <!--
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        -->
+
+        <!-- Include block: NoActionBar -->
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- End of block NoActionBar -->
+    </style>
+
+    <style name="MeizuAbsTheme" parent="Theme.Sherlock">
+        <item name="windowActionBarOverlay">true</item>
+        <item name="android:windowActionBarOverlay">true</item>
+
+        <!--
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        -->
+
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="actionBarStyle">@style/CustomActionBarStyle</item>
+        <item name="android:actionBarStyle">@style/CustomActionBarStyle</item>
+        <item name="actionButtonStyle">@style/CustomActionButtonStyle</item>
+        <item name="android:actionButtonStyle">@style/CustomActionButtonStyle</item>
+        <item name="searchViewSearchIcon">@drawable/ic_search</item>
+        <item name="actionBarItemBackground">@color/transparent</item>
+        <item name="android:actionBarItemBackground">@color/transparent</item>
+    </style>
+
+    <style name="NormalAbsTheme" parent="Theme.Sherlock">
+        <item name="windowActionBarOverlay">false</item>
+        <item name="android:windowActionBarOverlay">false</item>
+
+        <!--
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        -->
+
+        <item name="android:windowContentOverlay">@color/black</item>
+        <item name="actionBarStyle">@style/CustomActionBarStyle</item>
+        <item name="android:actionBarStyle">@style/CustomActionBarStyle</item>
+        <item name="actionButtonStyle">@style/CustomActionButtonStyle</item>
+        <item name="android:actionButtonStyle">@style/CustomActionButtonStyle</item>
+        <item name="searchViewSearchIcon">@drawable/ic_search</item>
+        <item name="actionBarItemBackground">@color/transparent</item>
+        <item name="android:actionBarItemBackground">@color/transparent</item>
+    </style>
+
+    <style name="Holo.Theme.CustomAbsOverlay" parent="Theme.Sherlock">
+        <item name="windowActionBarOverlay">false</item>
+        <item name="android:windowActionBarOverlay">false</item>
+        <item name="actionBarItemBackground">@color/transparent</item>
+        <item name="android:actionBarItemBackground">@color/transparent</item>
+        <item name="android:actionBarStyle">@style/CustomAbsOverlayStyle</item>
+    </style>
+
+    <style name="CustomActionButtonStyle" parent="Widget.Sherlock.ActionButton">
+        <item name="android:paddingLeft">0dip</item>
+        <item name="android:paddingStart">0dip</item>
+        <item name="android:paddingRight">0dip</item>
+    </style>
+
+    <style name="CustomActionBarStyle" parent="Widget.Sherlock.ActionBar.Solid">
+        <item name="titleTextStyle">@style/tv_large_white</item>
+        <item name="android:titleTextStyle">@style/tv_large_white</item>
+        <item name="subtitleTextStyle">@style/TextAppearance.Sherlock.Widget.ActionBar.Subtitle</item>
+        <item name="background">@color/red_ab_zdf</item>
+        <item name="android:background">@color/red_ab_zdf</item>
+        <item name="backgroundStacked">@color/red_ab_zdf</item>
+        <item name="android:backgroundStacked">@color/red_zdf</item>
+        <item name="divider">?attr/dividerVertical</item>
+        <item name="progressBarStyle">@style/Widget.Sherlock.Light.ProgressBar.Horizontal</item>
+        <item name="indeterminateProgressStyle">@style/Widget.Sherlock.Light.ProgressBar</item>
+        <item name="progressBarPadding">32dip</item>
+        <item name="itemPadding">8dip</item>
+    </style>
+
+    <style name="CustomAbsOverlayStyle" parent="Widget.Sherlock.ActionBar.Solid"></style>
+
+
+    <style name="loading_small" parent="@android:style/Widget.ProgressBar.Small.Inverse">
+        <item name="android:layout_width">21dp</item>
+        <item name="android:layout_height">21dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+    
+     <style name="shadow_above" >
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/img_shadow_above</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+    
+     <style name="shadow_below" >
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/img_shadow_below</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+    <style name="tv_normal">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/textSize_3</item>
+        <item name="android:textColor">@color/black_tv_zdf</item>
+        <item name="android:textColorHint">@color/et_hint</item>
+        <item name="android:textCursorDrawable">@drawable/img_ed_cursor</item>
+    </style>
+
+    <style name="tv_small" parent="tv_normal">
+        <item name="android:textSize">@dimen/textSize_5</item>
+    </style>
+
+    <style name="tv_small_white" parent="tv_small">
+        <item name="android:textColor">@color/white_zdf</item>
+    </style>
+
+    <style name="tv_large" parent="tv_normal">
+        <item name="android:textSize">@dimen/textSize_0</item>
+    </style>
+
+    <style name="tv_large_white" parent="tv_large">
+        <item name="android:textColor">@color/white_zdf</item>
+    </style>
+
+    <style name="tv_large_red" parent="tv_large">
+        <item name="android:textColor">@color/red_zdf_text</item>
+    </style>
+
+    <style name="tv_xlarge" parent="tv_normal">
+        <item name="android:textSize">@dimen/textSize_xlarge</item>
+    </style>
+
+    <style name="tv_normal_red" parent="tv_normal">
+        <item name="android:textColor">@color/red_zdf_text</item>
+    </style>
+
+    <style name="tv_xlarge_red" parent="tv_xlarge">
+        <item name="android:textColor">@color/red_zdf_text</item>
+    </style>
+
+    <style name="tv_large_blue" parent="tv_large">
+        <item name="android:textColor">@color/blue_zdf</item>
+    </style>
+
+    <style name="tv_normal_white" parent="tv_normal">
+        <item name="android:textColor">@color/white_zdf</item>
+    </style>
+
+    <style name="tv_normal_brown_white" parent="tv_normal">
+        <item name="android:textColor">@color/brown_white</item>
+    </style>
+
+    <style name="tv_normal_white_light" parent="tv_normal">
+        <item name="android:textColor">@color/white_light</item>
+    </style>
+
+    <style name="tv_normal_gray" parent="tv_normal">
+        <item name="android:textColor">@color/gray_light_zhenai</item>
+    </style>
+
+    <style name="et_normal" parent="tv_normal">
+        <item name="android:hint">@string/notFillIn</item>
+        <item name="android:paddingRight">@dimen/padding_small</item>
+        <item name="android:paddingTop">@dimen/padding_small</item>
+        <item name="android:paddingBottom">@dimen/padding_small</item>
+        <item name="android:paddingLeft">@dimen/padding_little</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="et_normal_gray" parent="tv_normal_gray">
+        <item name="android:hint">@string/notFillIn</item>
+        <item name="android:paddingRight">@dimen/padding_small</item>
+        <item name="android:paddingTop">@dimen/padding_small</item>
+        <item name="android:paddingBottom">@dimen/padding_small</item>
+        <item name="android:paddingLeft">@dimen/padding_little</item>
+        <item name="android:background">@drawable/edit_text_holo_dark</item>
+        <item name="android:textColor">@color/gray_zdf_et</item>
+    </style>
+
+    <style name="et_medium" parent="tv_medium">
+        <item name="android:hint">@string/notFillIn</item>
+        <item name="android:paddingLeft">@dimen/padding_little</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@null</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="et_psw" parent="et_medium">
+        <item name="android:digits">abcdefghijklmnopqrstuvwxyz1234567890</item>
+        <item name="android:inputType">textPassword</item>
+        <item name="android:maxLength">20</item>
+    </style>
+
+    <style name="et_medium_white" parent="et_medium">
+        <item name="android:textColor">@color/white_zdf</item>
+    </style>
+
+    <style name="tv_medium" parent="tv_normal">
+        <item name="android:textSize">@dimen/textSize_2</item>
+    </style>
+
+    <style name="tv_medium_white" parent="tv_medium">
+        <item name="android:textColor">@color/white_zdf</item>
+    </style>
+
+    <style name="tv_medium_blue" parent="tv_medium">
+        <item name="android:textColor">@color/blue_zdf</item>
+    </style>
+
+    <style name="tv_normal_blue" parent="tv_normal">
+        <item name="android:textColor">@color/blue_zdf</item>
+    </style>
+
+    <style name="tv_medium_white_light" parent="tv_medium">
+        <item name="android:textColor">@color/white_light</item>
+    </style>
+
+    <style name="tv_medium_red" parent="tv_medium">
+        <item name="android:textColor">@color/red_zdf_text</item>
+    </style>
+
+    <style name="tv_menu_item" parent="tv_medium">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/textSize_1</item>
+        <item name="android:textColor">@color/transparent</item>
+        <item name="android:background">@drawable/img_menu_item_bg_click</item>
+        <item name="android:drawablePadding">@dimen/padding_large</item>
+        <item name="android:paddingLeft">@dimen/padding_large</item>
+    </style>
+
+    <style name="divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/divider_height</item>
+        <item name="android:background">@color/black_divider</item>
+    </style>
+
+    <style name="line_h_menu">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/line_height</item>
+        <item name="android:background">#B7C4CF</item>
+        <item name="android:layout_marginLeft">@dimen/margin_large</item>
+        <item name="android:layout_marginRight">@dimen/margin_large</item>
+    </style>
+
+    <style name="line_h_room">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/line_height</item>
+        <item name="android:background">#B8B8B8</item>
+    </style>
+
+    <style name="btn_normal" parent="tv_medium_white">
+        <item name="android:layout_height">@dimen/height_btn</item>
+        <item name="android:layout_width">@dimen/width_btn</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="btn_block" parent="btn_normal">
+        <item name="android:layout_height">@dimen/btn_height_block</item>
+    </style>
+
+    <style name="btn_red" parent="btn_normal">
+        <item name="android:background">@drawable/btn_orange_click</item>
+    </style>
+
+    <style name="btn_red_long" parent="btn_red">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/btn_height_normal</item>
+    </style>
+
+
+    <style name="orderinfo_tv_r">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical|right</item>
+        <item name="android:textColor">@color/orderinfo_tv</item>
+        <item name="android:textSize">@dimen/textSize_3</item>
+    </style>
+
+    <style name="orderinfo_tv_b">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/orderinfo_info</item>
+        <item name="android:textSize">@dimen/textSize_3</item>
+    </style>
+
+    <style name="sreach_tv">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/sreach_tv</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+
+    <style name="sreach_tv_l">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/sreach_tv</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:layout_toRightOf">@+id/temp1</item>
+        <item name="android:drawableRight">@drawable/ic_right_sanjiao</item>
+        <item name="android:paddingRight">10dp</item>
+    </style>
+
+</resources>

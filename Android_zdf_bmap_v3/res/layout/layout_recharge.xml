@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutRecharge"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layoutBottomToPay" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/layoutHead"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/img_orange_account_head"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:paddingLeft="@dimen/padding_large"
+                    android:src="@drawable/ic_logo_account" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:layout_toRightOf="@+id/imageView1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/padding_large" >
+
+                    <TextView
+                        android:id="@+id/tvUsername"
+                        style="@style/tv_medium_white"
+                        android:text="账户：" />
+
+                    <TextView
+                        android:id="@+id/tvBalance"
+                        style="@style/tv_medium_white"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:text="余额：" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/tv_normal_white"
+                    android:layout_width="match_parent"
+                    android:background="@color/trans_white_hotel"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/padding_little"
+                    android:paddingTop="@dimen/padding_little"
+                    android:text="付款时，将优先使用账户余额" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_zdf"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/padding_medium"
+                android:paddingLeft="@dimen/padding_large"
+                android:paddingRight="@dimen/padding_large"
+                android:paddingTop="@dimen/padding_medium" >
+
+                <TextView
+                    android:id="@+id/textView1"
+                    style="@style/tv_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="充值金额" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    style="@style/tv_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_large"
+                    android:text="￥" />
+
+                <EditText
+                    android:id="@+id/etRechargeMoney"
+                    style="@style/et_normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:hint="建议每次充值金额小于499元"
+                    android:inputType="number"
+                    android:maxLength="4" />
+            </LinearLayout>
+
+            <include layout="@layout/line_h_gray" />
+
+            <include layout="@layout/layout_pay_platform" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/layoutBottomToPay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white_zdf"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <include layout="@layout/line_h_gray" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/padding_medium"
+            android:paddingTop="@dimen/padding_medium" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_large"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/textView6"
+                    style="@style/tv_medium_red"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView5"
+                    android:paddingTop="5dp"
+                    android:text="￥" />
+
+                <TextView
+                    android:id="@+id/tvMoneyPay"
+                    style="@style/tv_xlarge_red"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/textView6"
+                    android:hint="0"
+                    android:textColorHint="@color/red_zdf_text"
+                    android:text="" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnToPay"
+                style="@style/btn_red"
+                android:layout_width="133dp"
+                android:layout_height="39dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:gravity="center"
+                android:text="立即支付" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

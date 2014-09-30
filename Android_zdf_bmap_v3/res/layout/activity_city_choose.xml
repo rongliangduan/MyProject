@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg_light" >
+
+    <TextView
+        android:id="@+id/textView1"
+        style="@style/tv_normal_gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topBar"
+        android:paddingBottom="@dimen/padding_small"
+        android:paddingLeft="@dimen/padding_medium"
+        android:paddingTop="@dimen/padding_small"
+        android:text="定位城市" />
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height_half"
+        android:layout_alignBottom="@+id/textView1"
+        layout="@layout/line_h_gray" />
+
+    <RelativeLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:background="@color/white_zdf"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/padding_medium"
+            android:src="@drawable/ic_loc_city" />
+
+        <TextView
+            android:id="@+id/tv_gpsCity"
+            style="@style/tv_normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imageView"
+            android:hint="暂未获取"
+            android:paddingBottom="@dimen/padding_medium"
+            android:paddingLeft="@dimen/padding_medium"
+            android:paddingTop="@dimen/padding_medium" />
+
+        <ProgressBar
+            android:id="@+id/pb_small"
+            style="@style/loading_small"
+            android:layout_alignLeft="@+id/tv_gpsCity"
+            android:layout_centerVertical="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_height_half"
+        android:layout_alignBottom="@+id/ll1"
+        layout="@layout/line_h_gray" />
+
+    <ListView
+        android:id="@+id/myListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll1"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@color/gray_line_city"
+        android:dividerHeight="1dp"
+        android:listSelector="@drawable/transparent"
+        android:scrollbars="none" />
+
+    <cn.op.common.view.SideBar
+        android:id="@+id/sideBar"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/topBar"
+        android:layout_marginTop="5dp" />
+
+    <ImageView
+        style="@style/shadow_below"
+        android:layout_below="@+id/topBar" />
+
+    <include layout="@layout/top_bar" />
+
+    <include layout="@layout/pb" />
+
+</RelativeLayout>

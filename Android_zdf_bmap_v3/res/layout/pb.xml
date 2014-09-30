@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pb"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:gravity="center"
+    android:visibility="gone" >
+
+    <LinearLayout
+        android:id="@+id/tweet_pub_message"
+        android:layout_width="wrap_content"
+        android:layout_height="58dp"
+        android:background="@drawable/rounded_transparent_black_bg"
+        android:gravity="center"
+        android:paddingLeft="5.0dip" >
+
+        <ProgressBar style="@style/loading_small" />
+
+        <TextView
+            android:id="@+id/tvPbTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dip"
+            android:text="请稍等······"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="false"
+    android:background="@color/white_zdf"
+    android:paddingLeft="@dimen/padding_large"
+    android:paddingRight="@dimen/padding_large" >
+
+    <RelativeLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/padding_small"
+        android:paddingTop="@dimen/padding_small" >
+
+        <TextView
+            android:id="@+id/textView3"
+            style="@style/tv_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="Q:" />
+
+        <TextView
+            android:id="@+id/textView1"
+            style="@style/tv_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/imageView1"
+            android:layout_toRightOf="@+id/textView3"
+            android:paddingLeft="@dimen/padding_medium" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingTop="@dimen/padding_small"
+            android:src="@drawable/ic_arrow_right_setting" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout1"
+        android:paddingBottom="@dimen/padding_medium"
+        android:paddingTop="@dimen/padding_medium"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/textView4"
+            style="@style/tv_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="A:" />
+
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/tv_medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textView4"
+            android:layout_toRightOf="@+id/textView4"
+            android:paddingLeft="@dimen/padding_medium"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</RelativeLayout>

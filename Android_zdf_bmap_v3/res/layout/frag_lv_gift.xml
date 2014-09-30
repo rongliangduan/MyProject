@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/abs__action_bar_default_height" >
+
+    <TextView
+        android:id="@+id/tvEmpty"
+        style="@style/tv_medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/view1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-40dp"
+        android:drawablePadding="10dp"   
+        android:gravity="center"
+        android:text="敬请期待"
+        android:textColor="@color/zdf_no_data_tip"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_centerInParent="true" />
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@color/white_zdf"
+        android:dividerHeight="0dp"
+        android:fadingEdge="vertical"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none"
+        android:smoothScrollbar="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/sreach_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/dialogDeleteRecentBrowse"
+            layout="@layout/alert_dialog_delete_recent_browse"
+            android:visibility="gone" />
+
+        <include layout="@layout/pb" />
+    </RelativeLayout>
+
+    <include layout="@layout/pb" />
+
+</RelativeLayout>

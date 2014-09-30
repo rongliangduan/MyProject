@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg_light" >
+
+    <RelativeLayout
+        android:id="@+id/content_pay_online"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutStub"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/topBar" >
+
+            <include
+                layout="@layout/layout_pay_way"
+                android:visibility="gone" />
+
+            <include
+                layout="@layout/layout_recharge"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <include layout="@layout/top_bar" />
+
+        <ImageView
+            style="@style/shadow_below"
+            android:layout_below="@+id/topBar" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/pbPay"
+        layout="@layout/pb" />
+
+</RelativeLayout>

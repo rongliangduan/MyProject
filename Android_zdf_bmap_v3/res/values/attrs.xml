@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="RangeSeekBar">
+        <attr name="minSb" format="float" />
+        <attr name="maxSb" format="float" />
+        <attr name="startingMin" format="float" />
+        <attr name="startingMax" format="float" />
+    </declare-styleable>
+    <declare-styleable name="GifMoviewView">
+        <attr name="gif" format="reference" />
+        <attr name="paused" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="SwitchButton">
+        <attr name="switchBorder" format="reference" />
+        <attr name="switchBg" format="reference" />
+        <attr name="switchBtnPress" format="reference" />
+        <attr name="switchBtnNormal" format="reference" />
+        <attr name="switchText" format="reference" />
+    </declare-styleable>
+    
+    <declare-styleable name="BounceBackViewPager">
+        <!--
+    determines the maximum amount of translation along the z-axis during the overscroll. 
+    Default is 150.
+        -->
+        <attr name="overscroll_translation" format="dimension" />
+
+        <!-- Duration of animation when user releases the over scroll. Default is 400 ms. -->
+        <attr name="overscroll_animation_duration" format="integer" />
+    </declare-styleable>
+
+</resources>

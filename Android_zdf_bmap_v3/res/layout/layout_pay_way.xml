@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layouPayWay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/margin_medium"
+    android:animateLayoutChanges="false"
+    android:orientation="vertical" >
+
+    <include layout="@layout/line_h_gray" />
+
+    <RelativeLayout
+        android:id="@+id/layoutUseCoupon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white_zdf"
+        android:paddingBottom="@dimen/padding_medium"
+        android:paddingLeft="@dimen/padding_large"
+        android:paddingRight="@dimen/padding_large"
+        android:paddingTop="@dimen/padding_medium" >
+
+        <TextView
+            android:id="@+id/textView1"
+            style="@style/tv_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="代金券" />
+
+        <TextView
+            android:id="@+id/tvUseCoupon"
+            style="@style/tv_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_large"
+            android:layout_toLeftOf="@+id/imageView1"
+            android:text="使用代金券"
+            android:textColor="@color/gray_order_pay_tv3" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_arrow_right" />
+    </RelativeLayout>
+
+    <include layout="@layout/line_h_gray" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_zdf"
+        android:paddingBottom="@dimen/padding_medium"
+        android:paddingLeft="@dimen/padding_large"
+        android:paddingRight="@dimen/padding_large"
+        android:paddingTop="@dimen/padding_medium" >
+
+        <TextView
+            android:id="@+id/tvBalanceTitle"
+            style="@style/tv_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="余额支付" />
+
+        <TextView
+            android:id="@+id/tvBalance"
+            style="@style/tv_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_large"
+            android:layout_toLeftOf="@+id/imageView1"
+            android:text="￥" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_arrow_right"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <include layout="@layout/line_h_gray" />
+
+    <include layout="@layout/layout_pay_platform" />
+
+</LinearLayout>

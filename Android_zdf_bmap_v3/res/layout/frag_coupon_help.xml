@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_zdf" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topBar" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_large" >
+
+            <TextView
+                style="@style/tv_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="什么是优惠券"
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/tv_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:lineSpacingMultiplier="1.2"
+                android:text="优惠券是有间房发行和认可的现金抵用券，可以在预订钟点房时抵扣相应面值的金额" />
+
+            <TextView
+                style="@style/tv_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_large"
+                android:text="如何获取优惠券"
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/tv_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:lineSpacingMultiplier="1.2"
+                android:text="有间房手机客户端，官方微博、微信等平台会不定期推出优惠活动，向用户发放优惠券，欢迎大家多多关注哦" />
+
+            <TextView
+                style="@style/tv_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_large"
+                android:text="如何使用优惠券"
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/tv_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:lineSpacingMultiplier="1.2"
+                android:text="在客户端在线支付订房费用时，可以选择已激活的优惠券，抵扣相应的金额" />
+
+            <TextView
+                style="@style/tv_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_large"
+                android:text="优惠券找零兑现么"
+                android:textStyle="bold" />
+
+            <TextView
+                style="@style/tv_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:lineSpacingMultiplier="1.2"
+                android:text="优惠券不找零，不兑现。" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_large"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tvTel"
+                    style="@style/tv_large_red"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="有间房客户电话：4008-521-002"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        style="@style/shadow_below"
+        android:layout_below="@+id/topBar" />
+
+    <include layout="@layout/top_bar" />
+
+</RelativeLayout>

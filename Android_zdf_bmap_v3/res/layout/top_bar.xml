@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/topBar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_topBar"
+    android:layout_gravity="center"
+    android:background="@color/top_bar_bg"
+    android:gravity="center" >
+
+    <ImageView
+        android:id="@+id/btnLeft"
+        android:layout_width="@dimen/height_topBar"
+        android:layout_height="@dimen/height_topBar"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_back_click"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_topBar"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" >
+
+        <ImageView
+            android:id="@+id/btnRight"
+            android:layout_width="@dimen/height_topBar"
+            android:layout_height="@dimen/height_topBar"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_back_click"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvRight"
+            style="@style/tv_medium_red"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_topBar"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:minWidth="@dimen/height_topBar"
+            android:paddingRight="@dimen/padding_medium"
+            android:text="右侧文字"
+            android:textColor="@color/red_text_click"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/tv_large_red"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:maxLength="5"
+        android:text="标题"
+        android:textSize="@dimen/textSize_topBar_title" />
+
+</RelativeLayout>

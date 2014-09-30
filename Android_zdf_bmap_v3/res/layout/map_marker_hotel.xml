@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ic_map_marker_price"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingBottom="13dp"
+    android:paddingLeft="@dimen/padding_little"
+    android:paddingRight="@dimen/padding_little" >
+
+    <TextView
+        android:id="@+id/textView3"
+        style="@style/tv_medium_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:maxLength="8"
+        android:text="名称" />
+
+    <TextView
+        android:id="@+id/textView1"
+        style="@style/tv_normal_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:text="电话" />
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/tv_normal_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:maxLength="8"
+        android:text="地址" />
+
+</LinearLayout>

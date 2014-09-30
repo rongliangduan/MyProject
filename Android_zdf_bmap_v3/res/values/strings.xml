@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="channel_name">dev</string>
+    <string name="app_name">有间房</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_start">StartActivity</string>
+    <string name="title_activity_amap_simple">AMapSimpleActivity</string>
+    <string name="title_activity_picture_vp">PictureVpActivity</string>
+    <string name="title_activity_card_flip">CardFlipActivity</string>
+    <string name="title_activity_hotel">HotelActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_city_choose">CityChooseActivity</string>
+    <string name="title_activity_guide">GuideActivity</string>
+    <string name="title_activity_simple_frag">SimpleFragActivity</string>
+    <string name="title_activity_order_detail">OrderDetailActivity</string>
+    <string name="title_activity_pay_online">PayOnlineActivity</string>
+    <string name="title_activity_bmap_route">BMapRouteActivity</string>
+    <string name="title_activity_update_username">UpdateUsernameActivity</string>
+    <string name="nama_lsf">零时房</string>
+    <string name="nama_wyf">午夜房</string>
+    <string name="nama_zdf">钟点房</string>
+    <string name="title_activity_gift_detail">GiftDetailActivity</string>
+    <string name="copyright_cn">西安桔家软件科技有限公司 · 版权所有</string>
+    <string name="copyright_en">© 2014 jujiasoft. All rights reserved</string>
+    <string name="search_tip_no_match">你搜索的酒店在当前城市暂未开通预订服务</string>
+    <string name="map_tip_this_loc_no_hotel">没找到合适的酒店诶~ 换个地方试试吧</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="title_activity_lv_hotel">LvHotelActivity</string>
+    <string name="title_activity_add_coupon">AddCouponActivity</string>
+    <string name="title_activity_update_email">UpdateEmailActivity</string>
+    <string name="title_activity_update_real_name">UpdateRealNameActivity</string>
+    <string name="tip_order_zdf_pay_online">支付成功后30分钟内办理入住，超时酒店将计时</string>
+    <string name="tip_order_zdf_pay_arrive">预订成功后，订单将为您保留30分钟</string>
+    <string name="tip_order_wyf_pay_arrive">预订成功后，订单将为您保留2小时</string>
+
+</resources>

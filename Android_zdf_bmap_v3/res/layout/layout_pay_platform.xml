@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutPayPlatform"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/padding_medium" >
+
+    <TextView
+        style="@style/tv_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/padding_medium"
+        android:paddingLeft="@dimen/padding_large"
+        android:paddingRight="@dimen/padding_large"
+        android:paddingTop="@dimen/padding_medium"
+        android:text="选择支付方式"
+        android:textColor="@color/gray_order_pay_tv2" />
+
+    <include layout="@layout/line_h_gray" />
+
+    <RelativeLayout
+        android:id="@+id/layoutPayAli"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_zdf"
+        android:paddingBottom="@dimen/padding_medium"
+        android:paddingLeft="@dimen/padding_medium"
+        android:paddingRight="@dimen/padding_large"
+        android:paddingTop="@dimen/padding_medium" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_pay_way_alipay" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/cbPayAli"
+            android:layout_toRightOf="@+id/imageView1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/tv_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_large"
+                android:text="支付宝支付" />
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/tv_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_large"
+                android:text="推荐有支付宝账户的用户使用"
+                android:textColor="@color/gray_order_pay_tv" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/cbPayAli"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_cb_green_true" />
+    </RelativeLayout>
+
+    <include layout="@layout/line_h_gray" />
+
+    <RelativeLayout
+        android:id="@+id/layoutPayUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/img_wave_pay_bg"
+        android:paddingBottom="@dimen/padding_medium"
+        android:paddingLeft="@dimen/padding_medium"
+        android:paddingRight="@dimen/padding_large"
+        android:paddingTop="@dimen/padding_medium" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_pay_way_uppay" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/cbPayUp"
+            android:layout_toRightOf="@+id/imageView1"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/tv_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_large"
+                android:text="银联支付" />
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/tv_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_large"
+                android:text="储蓄卡支付需开通无卡支付功能"
+                android:textColor="@color/gray_order_pay_tv" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/cbPayUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_cb_green" />
+    </RelativeLayout>
+
+</LinearLayout>

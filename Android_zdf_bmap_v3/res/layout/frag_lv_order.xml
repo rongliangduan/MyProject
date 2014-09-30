@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg_light" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <include layout="@layout/layout_no_data" />
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            xmlns:swipe="http://schemas.android.com/apk/res-auto"
+            xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/pull_refresh_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@color/transparent"
+            android:dividerHeight="3dp"
+            android:fadingEdge="vertical"
+            android:fastScrollEnabled="false"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:listSelector="@android:color/transparent"
+            android:smoothScrollbar="true"
+            ptr:ptrMode="pullFromEnd" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutBottomDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            style="@style/shadow_above"
+            android:layout_above="@+id/layoutBottomDelete" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_bg_light"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/padding_medium"
+            android:paddingLeft="@dimen/padding_medium"
+            android:paddingRight="@dimen/padding_medium"
+            android:paddingTop="@dimen/padding_medium" >
+
+            <Button
+                android:id="@+id/btnSelectAll"
+                style="@style/btn_red"
+                android:layout_marginRight="@dimen/margin_small"
+                android:layout_weight="1"
+                android:background="@drawable/btn_orange_stroke_click"
+                android:text="全选"
+                android:textColor="@color/red_text_in_white_btn_click" />
+
+            <Button
+                android:id="@+id/btnDelete"
+                style="@style/btn_red"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_weight="1"
+                android:text="删除" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/pb" />
+
+</RelativeLayout>

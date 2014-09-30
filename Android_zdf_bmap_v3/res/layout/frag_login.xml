@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/main_bg_light"
+    tools:context=".MainActivity" >
+
+    <ViewFlipper
+        android:id="@+id/layoutContentLogin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topBar"
+        android:orientation="horizontal" >
+
+        <include layout="@layout/layout_login" />
+    </ViewFlipper>
+
+    <ImageView
+        style="@style/shadow_below"
+        android:layout_below="@+id/topBar" />
+
+    <include layout="@layout/top_bar" />
+
+    <include layout="@layout/pb" />
+
+</RelativeLayout>

@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.op.zdf"
+    android:versionCode="18"
+    android:versionName="3.0.1" >
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="19" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name=".AppContext"
+        android:allowBackup="true"
+        android:allowClearUserData="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme"
+        android:vmSafeMode="true" >
+        <activity
+            android:name=".ui.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.SearchActivity"
+            android:label="@string/title_activity_search"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name=".ui.StartActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".uppay.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".TestActivity"
+            android:label="@string/title_activity_test"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.HotelDetailActivity"
+            android:label="@string/title_activity_hotel"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name=".ui.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.CityChooseActivity"
+            android:label="@string/title_activity_city_choose"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.AMapRouteActivity"
+            android:label="@string/title_activity_amap_simple"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.PictureVpActivity"
+            android:label="@string/title_activity_picture_vp"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name=".alipay.Result" >
+        </activity>
+        <activity
+            android:name=".ui.GuideActivity"
+            android:label="@string/title_activity_guide"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" >
+        </activity>
+        <activity
+            android:name=".ui.SimpleFragActivity"
+            android:label="@string/title_activity_simple_frag"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name=".ui.OrderDetailActivity"
+            android:label="@string/title_activity_order_detail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.PayOnlineActivity"
+            android:label="@string/title_activity_pay_online"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.BMapRouteActivity"
+            android:label="@string/title_activity_bmap_route"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.UpdateUsernameActivity"
+            android:label="@string/title_activity_update_username"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name=".ui.GiftDetailActivity"
+            android:label="@string/title_activity_gift_detail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.alipay.android.app.sdk.WapPayActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <receiver android:name=".AlarmReceiver" >
+            <intent-filter>
+                <action android:name="cn.op.zdf.AlarmReceiver.ACTION_ALARM_TIME" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Provides search suggestions for words and their definitions. -->
+        <provider
+            android:name=".dao.DictionaryProvider"
+            android:authorities="cn.op.zdf.dao.DictionaryProvider"
+            android:syncable="false" />
+
+        <!-- ################### 百度api ################### -->
+        <!-- 正式签名key -->
+        <!--
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="DFde133943982019a97e17a60157c218" >
+        </meta-data>
+        -->
+
+
+        <!-- lufeizhang-mac debug key -->
+<!--   
+-->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="1RGTXVX2woGKbB8ZzMVevhNl" >
+        </meta-data>
+
+        <!-- ======百度定位====== -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+
+        <!-- ###################添加UmengAppkey###################### -->
+        <!-- 有间房Android -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5268ca9156240b7a6a01e9cf" >
+        </meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="@string/channel_name" />
+
+        <!-- ====== 友盟社会化 QQ空间和QQ SSO授权的Activity注册 ====== -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- 100424468，如果你使用的公用账号，则不需要修改；否则修改成你在QQ开放平台申请的 APP ID -->
+                <data android:scheme="tencent100424468" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.tencent.plus.ImageActivity" />
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+
+        <!-- ======友盟自动更新====== -->
+        <service
+            android:name="com.umeng.common.net.DownloadingService"
+            android:exported="true"
+            android:process=":DownloadingService" >
+        </service>
+
+        <activity
+            android:name="com.umeng.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+
+        <!-- ======友盟用户反馈====== -->
+        <activity
+            android:name="com.umeng.fb.ConversationActivity"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.umeng.fb.ContactActivity"
+            android:theme="@android:style/Theme.NoTitleBar" />
+
+        <!-- ###################添加talkingdata###################### -->
+        <meta-data
+            android:name="TD_APP_ID"
+            android:value="FCDF72E3BAA3393D5B4CDBADCDB3E82A" />
+        <meta-data
+            android:name="TD_CHANNEL_ID"
+            android:value="@string/channel_name" />
+
+        <!-- ###################腾讯云分析###################### -->
+        <meta-data
+            android:name="TA_APPKEY"
+            android:value="Aqc1101130398" />
+        <meta-data
+            android:name="InstallChannel"
+            android:value="@string/channel_name" />
+
+        <activity
+            android:name=".ui.LvHotelActivity"
+            android:label="@string/title_activity_lv_hotel" >
+        </activity>
+        <activity
+            android:name=".ui.AddCouponActivity"
+            android:label="@string/title_activity_add_coupon" >
+        </activity>
+        <activity
+            android:name=".ui.UpdateEmailActivity"
+            android:label="@string/title_activity_update_email" >
+        </activity>
+        <activity
+            android:name=".ui.UpdateRealNameActivity"
+            android:label="@string/title_activity_update_real_name" >
+        </activity>
+    </application>
+
+    <!-- 使用网络功能所需权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" >
+    </uses-permission>
+    <!-- SDK离线地图和cache功能需要读写外部存储器 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <!-- 获取设置信息和详情页直接拨打电话需要以下权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.CALL_PHONE" >
+    </uses-permission>
+    <!-- 使用定位功能所需权限,demo已集成百度定位SDK,不使用定位功能可去掉以下6项 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" >
+    </uses-permission>
+
+    <permission android:name="android.permission.BAIDU_LOCATION_SERVICE" >
+    </permission>
+
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCES_MOCK_LOCATION" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- Required 自定义用来收发消息的相关权限 -->
+    <permission
+        android:name="cn.op.zdf.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <!-- Required  一些系统要求的权限，如访问网络等 -->
+    <uses-permission android:name="cn.op.zdf.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+</manifest>
